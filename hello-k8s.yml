@@ -1,7 +1,13 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: hk8s
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: hello-kubernetes
+  namespace: hk8s
 spec:
   replicas: 3
   selector:
@@ -22,6 +28,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: hk8s-svc
+  namespace: hk8s
 spec:
   type: ClusterIP
   ports:

@@ -29,3 +29,23 @@ spec:
     targetPort: 8080
   selector:
     app: hello-kubernetes
+---
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  name: hk8s
+  namespace: hk8s
+  annotations:
+    openshift.io/host.generated: 'true'
+spec:
+  host: hk8s-hk8s.2886795279-80-kota02.environments.katacoda.com
+  to:
+    kind: Service
+    name: hk8s-svc
+    weight: 100
+  port:
+    targetPort: 8080
+  tls:
+    termination: edge
+    insecureEdgeTerminationPolicy: Redirect
+  wildcardPolicy: None

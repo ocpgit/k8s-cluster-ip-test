@@ -21,7 +21,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: cluster-demo
+  name: hk8s-svc
 spec:
   type: ClusterIP
   ports:
@@ -38,14 +38,11 @@ metadata:
   annotations:
     openshift.io/host.generated: 'true'
 spec:
-  host: hk8s-hk8s.2886795279-80-kota02.environments.katacoda.com
+  host: hk8s-hk8s.2886795298-80-lando01.environments.katacoda.com
   to:
     kind: Service
     name: hk8s-svc
     weight: 100
   port:
     targetPort: 8080
-  tls:
-    termination: edge
-    insecureEdgeTerminationPolicy: Redirect
   wildcardPolicy: None

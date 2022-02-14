@@ -1,0 +1,16 @@
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  name: hk8s
+  namespace: dennis-lab
+  annotations:
+    openshift.io/host.generated: 'true'
+spec:
+  host: hello-kubernetes-dennis-lab.apps.ocp.eds.taipei
+  to:
+    kind: Service
+    name: hk8s-svc
+    weight: 100
+  port:
+    targetPort: 8080
+  wildcardPolicy: None

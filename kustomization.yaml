@@ -1,0 +1,4 @@
+resources:
+- hk8s-deployment.yaml
+- hk8s-service.yaml
+- hk8s-route.yaml

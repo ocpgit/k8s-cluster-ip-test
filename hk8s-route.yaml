@@ -5,6 +5,7 @@ metadata:
   namespace: dennis-lab
   annotations:
     openshift.io/host.generated: 'true'
+    argocd.argoproj.io/compare-options: IgnoreExtraneous
 spec:
   host: hello-kubernetes-dennis-lab.apps.ocp.eds.taipei
   to:

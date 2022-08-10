@@ -7,7 +7,7 @@ metadata:
     openshift.io/host.generated: 'true'
     argocd.argoproj.io/compare-options: IgnoreExtraneous
 spec:
-  host: hello-kubernetes-dennis-lab.apps.ocp.eds.taipei
+  host: hello-kubernetes-dennis-lab.apps.ocp49.experteam.com.tw
   to:
     kind: Service
     name: hk8s-svc

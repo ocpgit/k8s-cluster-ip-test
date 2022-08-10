@@ -13,6 +13,7 @@ spec:
       labels:
         app: hello-kubernetes
     spec:
+      serviceAccount: sa-dennis
       containers:
       - name: hello-kubernetes
         #image: paulbouwer/hello-kubernetes:1.7

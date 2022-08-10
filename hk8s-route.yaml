@@ -13,5 +13,6 @@ spec:
     name: hk8s-svc
     weight: 100
   port:
-    targetPort: 8080
+    #targetPort: 8080
+    targetPort: 80
   wildcardPolicy: None
